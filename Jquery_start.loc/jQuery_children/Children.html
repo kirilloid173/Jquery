@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jquery_start</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<style>
+    table{
+        border: 4px solid black;
+    }
+    html{
+        font-size: 32px;
+        font-weight: bold;
+    }
+</style>
+<body>
+<div id="tab" class="heads">
+    <input type="text" required placeholder="You`re text">
+</div>
+<div class="heads">
+<table>
+    <tr><td>Слово</td><td>Перевод</td></tr>
+    <tr><td>Cabbage</td><td>Капуста</td></tr>
+    <tr><td>Carrot</td><td>Морковь</td></tr>
+    <tr><td>Potato</td><td>Картофель</td></tr>
+    <tr><td>Tomato</td><td>Помидор</td></tr>
+
+
+</table>
+</div>
+<div class="hes">
+    <table>
+        <tr><td>Слово</td><td>Перевод</td></tr>
+        <tr><td>Cabbage</td><td>Капуста</td></tr>
+        <tr><td>Carrot</td><td>Морковь</td></tr>
+        <tr><td>Potato</td><td>Картофель</td></tr>
+        <tr><td>Tomato</td><td>Помидор</td></tr>
+
+    </table>
+</div>
+<div>
+    <table>
+        <ul class="hes2">
+        <tr><td>Слово</td><td>Перевод</td></tr>
+        <tr><td>Cabbage</td><td>Капуста</td></tr>
+        <tr><td>Carrot</td><td>Морковь</td></tr>
+        <tr><td>Potato</td><td>Картофель</td></tr>
+        <tr><td>Tomato</td><td>Помидор</td></tr>
+        </ul>
+    </table>
+</div>
+<script>
+jQuery(document).ready(function () {
+    $("#tab").css('background-color', 'black', 'padding', '10em');
+    $('tr:even').css('background-color', 'silver');
+
+});
+
+$(function () {
+    var array=$(".heads").not('tr:even');
+   array.css('background-color', 'purple');
+   var element=$(".hes").has('tr');
+   element.css('background-color', 'red');
+   var elem=$('ul').find('.hes2');
+
+   elem.css('background-color', 'black');
+//----------------------------------------------------
+   var evens=$(".heads").filter("tr");
+evens.css('background-color', 'red');
+    for (var i=0;i<array.length;i++){
+        console.log("The lenght : "+i.toString());
+    }
+
+})
+</script>
+
+</body>
+</html>

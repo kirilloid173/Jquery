@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<a href="1.htmls" id="d1">The link (just for check DON`T CLICK YOU`re FUCKIN SHIT!</a>
+<a href="2.htmlssa" id="d1">The link (just for check DON`T CLICK YOU`re FUCKIN SHIT!</a>
+<a href="3.htmles" id="d1">The link (just for check DON`T CLICK YOU`re FUCKIN SHIT!</a>
+<script type="text/javascript">
+var links=document.getElementsByTagName('a')[0];
+console.log(links.id);
+
+$('a').each(function(index,elem){
+    console.log($(elem).attr('href'));
+});
+
+
+</script>
+</body>
+
+</html>
