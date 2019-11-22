@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter_4</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<style>
+    html{
+        font-size: 32px;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+<div class="lengs">
+    <ul>
+        <li class="hes">first</li>
+        <li class="hes">Second</li>
+        <li class="hes">Three</li>
+        <li class="hes">Four</li>
+        <li class="hes">Five</li>
+    </ul>
+
+</div>
+<div class="leng">
+    <ul>
+        <li class="hes">first</li>
+        <li class="hes">Second</li>
+        <li class="hes">Three</li>
+        <li class="hes">Four</li>
+        <li class="hes">Five</li>
+    </ul>
+</div>
+<script>
+    $('li').first().css('background-color', 'black');
+    var vb=document.createElement('li');
+    vb.innerHTML='Zero';
+    $('li.hes').first().before(vb);
+    var vbs=document.createElement('li');
+    vbs.innerHTML='Six';
+    $('li.hes').last().after($('li.hes').last().clone().html('Visual Basic'));
+    $('<h1>WTF MAN?!</h1>').insertBefore('li.hes:first');
+    $('<h3>Oh okay</h3>').insertAfter('li.hes:last');
+    $('.lengs').wrap('<li>wrap</li>');
+    $('.lengs').wrapAll('<li>Wrap all</li>')
+    $('.lengs').remove(); //You delete class man! Thug life.
+    $('.leng').wrap('<li>wrap</li>');
+    $('.leng').wrapAll('<li>Wrap all</li>')
+    $('.leng').detach();
+</script>
+<button class="button">click me!</button>
+<button class="butts" id="butts">one time</button>
+<script type="text/javascript">
+    $(function () {
+        $('button').bind('click', function () {
+            alert("jQuery");
+            $('button').unbind();
+            $('.butts').one('click', function () {
+                alert("only one time!");
+            });
+        });
+    });
+
+
+
+
+
+
+</script>
+</body>
+</html>
