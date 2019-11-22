@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter_4</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<style>
+    html{
+        font-size: 32px;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+<ul>
+    <li class="hes">first</li>
+    <li class="hes">Second</li>
+    <li class="hes">Three</li>
+    <li class="hes">Four</li>
+    <li class="hes">Five</li>
+</ul>
+<script>
+    $('li').first().css('background-color', 'black');
+    var vb=document.createElement('li');
+    vb.innerHTML='Zero';
+    $('li.hes').first().before(vb);
+    var vbs=document.createElement('li');
+    vbs.innerHTML='Six';
+    $('li.hes').last().after($('li.hes').last().clone().html('Visual Basic'));
+    $('<h1>WTF MAN?!</h1>').insertBefore('li.hes:first');
+    $('<h3>Oh okay</h3>').insertAfter('li.hes:last');
+</script>
+</body>
+</html>

@@ -5,10 +5,16 @@
     <title>Title</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
+<style>
+    html{
+        font-size: 32px;
+        font-weight: bold;
+    }
+</style>
 <body>
-<a href="1.htmls" id="d1">The link (just for check DON`T CLICK YOU`re FUCKIN SHIT!</a>
-<a href="2.htmlssa" id="d1">The link (just for check DON`T CLICK YOU`re FUCKIN SHIT!</a>
-<a href="3.htmles" id="d1">The link (just for check DON`T CLICK YOU`re FUCKIN SHIT!</a>
+<a href="1.htmls" id="d1"> The link (just for check DON`T CLICK YOU`re FUCKIN SHIT! </a>
+<a href="2.htmlssa" id="d2"> The link (just for check DON`T CLICK YOU`re FUCKIN SHIT! </a>
+<a href="3.htmles" id="d3">  The link (just for check DON`T CLICK YOU`re FUCKIN SHIT! </a>
 <script type="text/javascript">
 var links=document.getElementsByTagName('a')[0];
 console.log(links.id);
@@ -17,8 +23,25 @@ $('a').each(function(index,elem){
     console.log($(elem).attr('href'));
 });
 
+var html = $('li.punkt2').html();
+console.log(html);
 
+// установка новой разметки элемента списка
+var newList=$('<ul><li>Item1</li><li>Item2</li></ul>');
+console.log(newList.html());
 </script>
+<div class="hes2">
+
+</div>
+<ul>
+    <li class="aras"> The first</li>
+    <li class="aras"></li>
+    <li id="aras"></li>
+
+</ul>
+<ul>
+    <li>Firstss man</li>
+</ul>
 </body>
 
 </html>
