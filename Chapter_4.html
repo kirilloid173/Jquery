@@ -51,22 +51,24 @@
 </script>
 <button class="button">click me!</button>
 <button class="butts" id="butts">one time</button>
+<button class="keyd">The keydowns</button>
 <script type="text/javascript">
     $(function () {
-        $('button').bind('click', function () {
+        $('button').bind('click', function (e) {
             alert("jQuery");
             $('button').unbind();
-            $('.butts').one('click', function () {
+            e.stopPropagation();
+            $('.butts').one('click', function (e) {
                 alert("only one time!");
+                e.stopPropagation();
+                $('.keyd').delegate('click', function (e) {
+                   $(this).css('background-color', 'black', 'font-size', '32px');
+                    console.log(e.which);
+                    e.stopPropagation();
+                })
             });
         });
     });
-
-
-
-
-
-
 </script>
 </body>
 </html>

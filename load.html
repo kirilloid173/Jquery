@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Load</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<button>Загрузить</button>
+<div id="news"><h3>Нет новостей</h3></div>
+<div id="newss"></div>
+<script type="text/javascript">
+    $(function(){
+        $('button').click(function(e){
+            $('#news').load('Loads.php');
+            e.stopPropagation();
+        });
+        $('button').click(function () {
+            $('#newss').load('loads2.php', {'event':'The february', 'date':'12.05.1993'});
+        })
+    });
+</script>
+</body>
+</html>
