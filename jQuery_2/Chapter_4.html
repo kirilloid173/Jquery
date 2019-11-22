@@ -13,6 +13,7 @@
 </style>
 
 <body>
+<div class="lengs">
 <ul>
     <li class="hes">first</li>
     <li class="hes">Second</li>
@@ -20,6 +21,7 @@
     <li class="hes">Four</li>
     <li class="hes">Five</li>
 </ul>
+</div>
 <script>
     $('li').first().css('background-color', 'black');
     var vb=document.createElement('li');
@@ -30,6 +32,8 @@
     $('li.hes').last().after($('li.hes').last().clone().html('Visual Basic'));
     $('<h1>WTF MAN?!</h1>').insertBefore('li.hes:first');
     $('<h3>Oh okay</h3>').insertAfter('li.hes:last');
+    $('.lengs').wrap('<li>wrap</li>');
+    $('.lengs').wrapAll('<li>Wrap all</li>')
 </script>
 </body>
 </html>
